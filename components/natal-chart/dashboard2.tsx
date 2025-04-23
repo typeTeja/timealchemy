@@ -37,7 +37,7 @@ export default function NatalChartDashboard({ onSubmitResult }: Props) {
     }
 
     const datetimeStr = `${form.date}T${form.time}`
-    const url = `http://127.0.0.1:8000/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${form.latitude}&lon=${form.longitude}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}&ayanamsa=${form.ayanamsa}`
+    const url = `https://vertex-bxg2.onrender.com/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${form.latitude}&lon=${form.longitude}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}&ayanamsa=${form.ayanamsa}`
 
     try {
       const response = await fetch(url)
@@ -93,7 +93,7 @@ export default function NatalChartDashboard({ onSubmitResult }: Props) {
             const name = row.Name
             const place = row.Place
 
-            const url = `http://127.0.0.1:8000/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${lat}&lon=${lon}&zodiac_type=sidereal&coordinate_system=geocentric&ayanamsa=lahiri`
+            const url = `https://vertex-bxg2.onrender.com/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${lat}&lon=${lon}&zodiac_type=sidereal&coordinate_system=geocentric&ayanamsa=lahiri`
 
             const response = await fetch(url)
             const data = await response.json()

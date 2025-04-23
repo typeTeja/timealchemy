@@ -36,7 +36,7 @@ export default function NatalChartDashboard({ onSubmitResult }: Props) {
     }
 
     const datetimeStr = `${form.date}T${form.time}`
-    const url = `http://127.0.0.1:8000/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${form.latitude}&lon=${form.longitude}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}&ayanamsa=${form.ayanamsa}`
+    const url = `https://vertex-bxg2.onrender.com/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${form.latitude}&lon=${form.longitude}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}&ayanamsa=${form.ayanamsa}`
 
     try {
       console.log("Fetching:", url)
