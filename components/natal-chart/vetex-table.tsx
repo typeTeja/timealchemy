@@ -36,7 +36,7 @@ export default function NatalChartDashboard({ onSubmitResult }: Props) {
       return
     }
 
-    const url = `https://web-production-5eab0.up.railway.app/api/v1/vertex?date=${form.date}&time=${form.time}&latitude=${form.latitude}&longitude=${form.longitude}&elevation=0&house_system=P&ayanamsa=${form.ayanamsa}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}`           
+    const url = `https://api.hiteja.com/api/v1/vertex?date=${form.date}&time=${form.time}&latitude=${form.latitude}&longitude=${form.longitude}&elevation=0&house_system=P&ayanamsa=${form.ayanamsa}&zodiac_type=${form.zodiacType}&coordinate_system=${form.coordinateSystem}`           
     try {
       console.log('Fetching from URL:', url);
       const response = await fetch(url)
@@ -118,7 +118,7 @@ export default function NatalChartDashboard({ onSubmitResult }: Props) {
             const name = row.Name
             const place = row.Place
 
-            //const url = `https://vertex-bxg2.onrender.com/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${lat}&lon=${lon}&zodiac_type=sidereal&coordinate_system=geocentric&ayanamsa=lahiri`
+            //const url = `https://api.hiteja.com/api/v1/natal-chart?datetime_str=${datetimeStr}&lat=${lat}&lon=${lon}&zodiac_type=sidereal&coordinate_system=geocentric&ayanamsa=lahiri`
             // Using the new Vertex API endpoint
             const url = `https://web-production-5eab0.up.railway.app/api/v1/vertex?date=${dateStr}&time=${timeStr}&latitude=${lat}&longitude=${lon}&elevation=0&house_system=P&ayanamsa=LAHIRI&zodiac_type=sidereal&coordinate_system=geocentric`
             const response = await fetch(url)
