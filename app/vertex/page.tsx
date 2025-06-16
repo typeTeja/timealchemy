@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import NatalChartDashboard from '@/components/natal-chart/dashboard2'
+// import NatalChartDashboard from '@/components/natal-chart/dashboard2'
+import NatalChartDashboard from '@/components/natal-chart/vetex-table'
 import ResultsTable, { AstroRow } from '@/components/natal-chart/results-table'
 
 export default function NatalChartPage() {
